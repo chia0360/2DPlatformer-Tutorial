@@ -50,7 +50,7 @@ public class Player : MonoBehaviour {
         {
             myAnimator.SetBool("run", true);
         }
-        else if (!this.myAnimator.GetCurrentAnimatorStateInfo(0).IsName("Run"))
+        else if (this.myAnimator.GetCurrentAnimatorStateInfo(0).IsName("Run") && !run)
         {
             myAnimator.SetBool("run", false);
         }
